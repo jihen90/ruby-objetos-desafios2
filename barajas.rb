@@ -17,15 +17,15 @@ class Decks
     end
 
     def shuffle
-         @cards.shuffle
+        @cards.shuffle
     end
 
     def take
-        shuffle.pop(51)
+        self.shuffle.pop(51)
     end
 
     def deal_out
-        take.shift(5)
+        self.take.shift(5)
     end
 end
 
