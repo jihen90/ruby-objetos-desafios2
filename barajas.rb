@@ -21,11 +21,11 @@ class Decks
     end
 
     def take
-        self.shuffle.pop(51)
+        self.shuffle.shift(51)
     end
 
     def deal_out
-        self.take.shift(5)
+        self.take.pop(5)
     end
 end
 
