@@ -1,8 +1,9 @@
 require_relative 'carta'
 
 class Decks
+    attr_reader :cards, :ey
     def initialize
-
+        @ey = ey
         @cards = []
         numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
         kinds = ['C','D','T','E']
@@ -17,22 +18,26 @@ class Decks
     end
 
     def shuffle
-        @cards.shuffle
+        @ey = self.cards.shuffle
     end
 
     def take
-        self.shuffle.shift(51)
+        self.ey.pop
     end
 
     def deal_out
-        self.take.pop(5)
+        self.ey.pop(5)
     end
 end
 
 
 deck = Decks.new
 
-
+pp deck.shuffle
+pp "------"
+pp deck.take
+pp "------"
+pp deck.deal_out
 
 
 
